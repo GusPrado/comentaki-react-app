@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { AuthContext } from './auth'
 
-const CreateUser = () => {
+const SigninUser = () => {
   const auth = useContext(AuthContext)
   const [form, setForm] = useState({
     email: '',
@@ -20,19 +20,19 @@ const CreateUser = () => {
 
   return (
     <>
-      <h3>Criar nova conta</h3>
+      <h3>Entrar na sua conta</h3>
       {
-        auth.createUser.createUserState.error !== '' &&
-        <p>{auth.createUser.createUserState.error}</p>
+        auth.signInUser.signInUserState.error !== '' &&
+        <p>{auth.signInUser.signInUserState.error}</p>
       }
-      {JSON.stringify(auth.createUser.createUserState)}
+      {/* {JSON.stringify(auth.signInUser.signInUserState)} */}
       <input type="text" placeholder="Seu e-mail" value={form.email} onChange={handleChange('email')} />
       <input type="password" placeholder="Sua senha" value={form.passwd} onChange={handleChange('passwd')} />
       <button onClick={() => {
-        auth.createUser.createUser(form.email, form.passwd)
-      }}>Criar conta</button>
+        auth.signInUser.signInUser(form.email, form.passwd)
+      }}>Entrar</button>
     </>
   )
 }
 
-export default CreateUser
+export default SigninUser

@@ -6,6 +6,7 @@ import NewComment from './NewComment'
 import Comments from './Comments'
 import CreateUser from './CreateUser'
 import UserInfo from './UserInfo'
+import SigninUser from './SigninUser'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <NewComment />
         <Comments />
         <CreateUser />
+        <SigninUser />
         <UserInfo />
       </div>
     </AuthProvider>
