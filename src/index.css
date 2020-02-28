@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Frijole|Montserrat&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  background: #000;
+  background-image: url("https://www.transparenttextures.com/patterns/connected.png");
+  color: #fff;
+}
+
+h1 {
+  font-family: Frijole, Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  padding: 3%;
+}
+
+.login-container {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.login-form{
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 8px 0 rgba(255, 255, 255, 0.2), 0 9px 26px 0 rgba(255, 255, 255, 0.19);
+}
+
+.form-like {
+  padding: 5%;
+}
+
+.btnSubmit {
+  border-radius: 1rem;
+  padding: 1.5%;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.btnSubmit:hover {
+  background-color: rgb(95, 93, 93);
+  color: #fff;
+}

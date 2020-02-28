@@ -7,19 +7,25 @@ import Comments from './Comments'
 import CreateUser from './CreateUser'
 import UserInfo from './UserInfo'
 import SigninUser from './SigninUser'
+import Header from './Header'
 
 
 function App() {
  
   return (
     <AuthProvider>
-      <div>
+      <div className="container text-center">
+        <Header />
+        <UserInfo />
         <NewComment />
         <Comments />
-        <CreateUser />
-        <SigninUser />
-        <UserInfo />
-      </div>
+        <div className="login-container">
+          <div className="row">
+            <SigninUser />
+            <CreateUser />
+          </div>
+        </div>        
+      </div>  
     </AuthProvider>
   );
 }

@@ -33,7 +33,7 @@ const NewComment = () => {
     <div>
       <textarea value={comment} onChange={evt => setComment(evt.target.value)}/>
       <br/>
-      <button onClick={createComment}>Comentar</button>
+      <button className="btn btn-outline-dark" onClick={createComment}>Comentar</button>
     </div>
   )
 }

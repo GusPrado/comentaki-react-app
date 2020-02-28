@@ -20,17 +20,29 @@ const CreateUser = () => {
 
   return (
     <>
-      <h3>Criar nova conta</h3>
-      {
-        auth.createUser.createUserState.error !== '' &&
-        <p>{auth.createUser.createUserState.error}</p>
-      }
-      {JSON.stringify(auth.createUser.createUserState)}
-      <input type="text" placeholder="Seu e-mail" value={form.email} onChange={handleChange('email')} />
-      <input type="password" placeholder="Sua senha" value={form.passwd} onChange={handleChange('passwd')} />
-      <button onClick={() => {
-        auth.createUser.createUser(form.email, form.passwd)
-      }}>Criar conta</button>
+        <div className="col-md-6 login-form">
+          <h3>Criar nova conta</h3>
+          {
+            auth.createUser.createUserState.error !== '' &&
+            <p className="alert alert-danger">{auth.createUser.createUserState.error}</p>
+          }
+          <div className="form-like">
+            <div className="form-group">
+              <input type="text" className="form-control" placeholder="Seu e-mail" value={form.email} onChange={handleChange('email')} />
+            </div>
+            <div className="form-group">
+              <input type="password" className="form-control" placeholder="Sua senha" value={form.passwd} onChange={handleChange('passwd')} />
+            </div>
+            <div className="form-group">
+              <button className="btnSubmit btn-block" onClick={() => {
+                auth.createUser.createUser(form.email, form.passwd)
+                }}>
+                  Criar conta
+              </button>
+            </div>
+          </div>
+        </div>   
+      {/* {JSON.stringify(auth.createUser.createUserState)} */}   
     </>
   )
 }
