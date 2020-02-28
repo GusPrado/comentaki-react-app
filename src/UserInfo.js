@@ -15,8 +15,8 @@ const FormDisplayName = ({ displayName, user }) => {
 
   return (
     <>
-      <input type="text" value={newDisplayName} onChange={handleChange}/>
-      <button onClick={handleSave}>Save display name</button>
+      <input type="text" className="form-control" value={newDisplayName} onChange={handleChange}/>
+      <button className="btn btn-outline-light" onClick={handleSave}>Salvar apelido</button>
     </>
   )
 }
@@ -32,11 +32,11 @@ const UserInfo = () => {
   const dn = displayName || altDisplayName
 
   return (
-    <>
-      <p>Olá {dn}</p>
+    <div className="user-info">
+      <h2>Olá {dn}!</h2>
       <FormDisplayName displayName={dn} user={auth.user}/>
-      <button onClick={auth.signout}>Sair</button>
-    </>
+      <button className="btn btn-outline-light" onClick={auth.signout}>Sair</button>
+    </div>
 
   )
 }

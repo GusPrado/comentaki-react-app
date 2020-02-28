@@ -8,6 +8,7 @@ import CreateUser from './CreateUser'
 import UserInfo from './UserInfo'
 import SigninUser from './SigninUser'
 import Header from './Header'
+import Footer from './Footer'
 
 
 function App() {
@@ -24,8 +25,9 @@ function App() {
             <SigninUser />
             <CreateUser />
           </div>
-        </div>        
-      </div>  
+        </div>
+        <Footer />       
+      </div>   
     </AuthProvider>
   );
 }

@@ -21,7 +21,10 @@ const CreateUser = () => {
   return (
     <>
         <div className="col-md-6 login-form">
-          <h3>Criar nova conta</h3>
+          <div className="login-logo">
+            <img src="https://cdn.onlinewebfonts.com/svg/img_254874.png" alt="login logo"/>
+          </div>
+          <h3><u>Criar nova conta</u></h3>
           {
             auth.createUser.createUserState.error !== '' &&
             <p className="alert alert-danger">{auth.createUser.createUserState.error}</p>
